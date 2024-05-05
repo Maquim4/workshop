@@ -1,0 +1,140 @@
+@import "reset.css";
+
+/* Variables */
+:root {
+  --desktop-font-size: 1.2rem/1.55;
+  --mobile-font-size: 1rem/1.45;
+  --text-color: #2d2d2d;
+  --link-color: #323232;
+  --link-color-alt: #ff9c01;
+  --link-color-hover: #ffd001;
+  --primary-color: lightsteelblue;
+  --secondary-color: aliceblue;
+  --tertiary-color: whitesmoke;
+
+  --main-color: #443;
+  --border-radius: 50% 4% 50% 4% / 4% 50% 4% 50%;
+  --border-radius-hover: 4% 50% 6% 50% / 50% 4% 50% 4%;
+  --border: 0.2rem solid var(--main-color);
+  --border-hover: 0.2rem dashed var(--main-color);
+
+  --text-dark: #333333;
+  --text-light: #f5f5f5;
+
+  --bg-primary: #f3efea;
+
+  /* Light mode */
+  --light-switch-shadow: #373d4e;
+  --light-switch-icon: "🌚";
+  --light-switch-text: "dark mode?";
+  --light-text: #222430;
+  --light-bg: #f7f7f7;
+  --light-theme: #d34a97;
+
+  /* Dark mode */
+  --dark-switch-shadow: #fce477;
+  --dark-switch-icon: "🌝";
+  --dark-switch-text: "light mode?";
+  --dark-text: #f7f7f7;
+  --dark-bg: #222430;
+  --dark-theme: #bd93f9;
+
+  /* Default mode */
+  --switch-shadow-color: var(--light-switch-shadow);
+  --switch-icon: var(--light-switch-icon);
+  --switch-text: var(--light-switch-text);
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+  --theme-color: var(--light-theme);
+}
+
+.theme-switch:checked ~ #page {
+  --switch-shadow-color: var(--dark-switch-shadow);
+  --switch-icon: var(--dark-switch-icon);
+  --switch-text: var(--dark-switch-text);
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --theme-color: var(--light-theme);
+}
+
+/* Typography */
+body {
+  color: var(--text-color);
+  margin: 0;
+  background-color: var(--bg-primary);
+  font: var(--desktop-font-size) -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 68px;
+  height: 38px;
+  margin: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4c4c4c;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+@keyframes going-dark {
+  100% {
+    -webkit-transform: translateX(28px);
+  }
+}
+
+@keyframes going-light {
+  0% {
+    -webkit-transform: translateX(28px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 8px;
+  bottom: 7px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
+  -webkit-transition: 0.4s;
+  animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  background-color: white;
+  -webkit-animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
+  -webkit-transition: all 0.4s;
+  animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
+  transition: all 0.4s;
+}
