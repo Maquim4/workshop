@@ -12,7 +12,7 @@
   --secondary-color: aliceblue;
   --tertiary-color: whitesmoke;
 
-  --main-color: #443;
+  --main-color: #2d2d2d;
   --border-radius: 50% 4% 50% 4% / 4% 50% 4% 50%;
   --border-radius-hover: 4% 50% 6% 50% / 50% 4% 50% 4%;
   --border: 0.2rem solid var(--main-color);
@@ -26,42 +26,35 @@
   /* Light mode */
   --light-switch-shadow: #373d4e;
   --light-switch-icon: "🌚";
-  --light-switch-text: "dark mode?";
   --light-text: #222430;
   --light-bg: #f7f7f7;
   --light-theme: #d34a97;
+  --light-theme-filter: invert(1) sepia(0) saturate(0) hue-rotate(0);
 
   /* Dark mode */
   --dark-switch-shadow: #fce477;
   --dark-switch-icon: "🌝";
-  --dark-switch-text: "light mode?";
   --dark-text: #f7f7f7;
-  --dark-bg: #222430;
+  --dark-bg: #070706;
   --dark-theme: #bd93f9;
+  --dark-theme-filter: invert(0) sepia(0) saturate(0) hue-rotate(0);
 
-  /* Default mode */
-  --switch-shadow-color: var(--light-switch-shadow);
   --switch-icon: var(--light-switch-icon);
-  --switch-text: var(--light-switch-text);
-  --text-color: var(--light-text);
-  --bg-color: var(--light-bg);
-  --theme-color: var(--light-theme);
-}
 
-.theme-switch:checked ~ #page {
-  --switch-shadow-color: var(--dark-switch-shadow);
-  --switch-icon: var(--dark-switch-icon);
-  --switch-text: var(--dark-switch-text);
-  --text-color: var(--dark-text);
-  --bg-color: var(--dark-bg);
-  --theme-color: var(--light-theme);
+  --bg-color: var(--bg-primary);
+  --orthogonal-color: var(var(--dark-bg));
+  --svg-filter: var(--light-theme-filter);
+  --text: var(--text-dark);
+  --title-font-color: var(--text-dark);
+  --stages-color: var(--text-color);
+  --footer-color: var(--primary-color);
 }
 
 /* Typography */
 body {
   color: var(--text-color);
   margin: 0;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-color);
   font: var(--desktop-font-size) -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -74,67 +67,36 @@ html {
   scroll-behavior: smooth;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 68px;
-  height: 38px;
-  margin: 5px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
+#theme-toggle:hover {
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #4c4c4c;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 34px;
+}
+body.theme-light #theme-toggle::before {
+  content: var(--switch-icon);
 }
 
-@keyframes going-dark {
-  100% {
-    -webkit-transform: translateX(28px);
-  }
+body.theme-dark #theme-toggle::before {
+  content: var(--switch-icon);
 }
 
-@keyframes going-light {
-  0% {
-    -webkit-transform: translateX(28px);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-  }
+.theme-dark {
+  --bg-color: var(--dark-bg);
+  --orthogonal-color: var(--bg-primary);
+  --title-font-color: rgb(21, 212, 139);
+  --switch-icon: var(--dark-switch-icon);
+  --svg-filter: var(--light-theme-filter);
+  --text: var(--text-light);
+  --stages-color: var(--bg-primary);
+  --main-color: var(--bg-primary);
+  --border: 0.2rem solid var(--bg-primary);
+  --border-hover: 0.2rem dashed var(--bg-primary);
+  --footer-color: var(--link-color);
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 24px;
-  width: 24px;
-  left: 8px;
-  bottom: 7px;
-  background-color: white;
-  border-radius: 50%;
-  -webkit-animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
-  -webkit-transition: 0.4s;
-  animation: going-light 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) normal;
-  transition: 0.4s;
-}
-
-input:checked + .slider:before {
-  background-color: white;
-  -webkit-animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
-  -webkit-transition: all 0.4s;
-  animation: going-dark 0.4s cubic-bezier(0.57, 1.52, 0.64, 1) forwards;
-  transition: all 0.4s;
+.theme-light {
+  --switch-icon: var(--light-switch-icon);
+  --orthogonal-color: var(var(--dark-bg));
+  --bg-color: var(--bg-primary);
+  --svg-filter: var(--dark-theme-filter);
+  --text: var(--text-dark);
+  --main-color: var(--text-dark);
 }

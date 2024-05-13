@@ -13,20 +13,17 @@
   <body>
     <header class="header">
       <div id="menu-btn" class="fas fa-bars"></div>
-      <a href="#" class="logo">
+      <a href="/home.html" class="logo">
         <img src="assets/AR-logo.svg" alt="LOGO" />
       </a>
       <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#menu">menu</a>
-        <a href="#review">review</a>
-        <a href="#book">book</a>
+        <a class="link" href="/home.html">Home</a>
+        <a class="link" href="/about.html">About</a>
+        <a class="link" href="#menu">Menu</a>
+        <a class="link" href="/classes.html">Classes</a>
+        <a class="link" href="#book">Book</a>
       </nav>
-      <label class="switch">
-        <input type="checkbox" name="theme_switch" />
-        <span class="slider"></span>
-      </label>
+      <a class="emoji" id="theme-toggle"></a>
     </header>
 
     <section class="home" id="home">
@@ -45,7 +42,7 @@
 
     <section class="section banner">
       <div class="banner__container">
-        <h3 class="section_title">More than 10 years we produce</h3>
+        <h3 class="section_title">More than 10 years we recover</h3>
         <div class="icon">
           <img class="banner-icon" src="assets/door-2 1.svg" alt="icon" />
           <span>DOORS</span>
@@ -120,12 +117,11 @@
       </div>
     </section>
     <!-- BOOKING -->
-    <section class="book" id="book">
-      <h1 class="section_title">booking</h1>
-      <form action="">
+    <section class="section book" id="book">
+      <h1 class="section_title">Booking</h1>
+      <form class="form" action="">
         <input type="text" placeholder="Name" class="box" />
         <input type="email" placeholder="Email" class="box" />
-        <input type="number" placeholder="Number" class="box" />
         <textarea
           name=""
           placeholder="Message"
@@ -139,7 +135,7 @@
     </section>
     <footer class="footer">
       <div class="box-container">
-        <div class="box">
+        <div class="box desc">
           <p class="logo">Auckland Restore</p>
           <p>
             Find a wide range of high-quality furniture pieces that will elevate
@@ -149,22 +145,31 @@
           <p>1234 boul Lasalle, Montreal, H4Q 6Y5</p>
         </div>
         <div class="box">
-          <h4>INFORMATION</h4>
-          <a href="#">Site Map</a>
-          <a href="#">Search Terms</a>
-          <a href="#">Advance Search</a>
-          <a href="#">Privacy Policy</a>
+          <h4 class="head">INFORMATION</h4>
+          <a class="link" href="#">Site Map</a>
+          <a class="link" href="#">Search Terms</a>
+          <a class="link" href="#">Advance Search</a>
+          <a class="link" href="#">Privacy Policy</a>
         </div>
         <div class="box">
-          <h4>FOLLOW US</h4>
-          <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
-          <a href="#"><i class="fab fa-twitter"></i> twitter</a>
-          <a href="#"><i class="fab fa-instagram"></i> instagram</a>
-          <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+          <h4 class="head">FOLLOW US</h4>
+          <a class="link" href="#"
+            ><i class="icon fab fa-facebook-f"></i> facebook</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-twitter"></i> twitter</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-instagram"></i> instagram</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-linkedin"></i> linkedin</a
+          >
         </div>
       </div>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/sticky-header.js"></script>
   </body>
 </html>
