@@ -7,3 +7,57 @@
   background-position: center;
   background-size: cover;
 }
+
+.list {
+  display: flex;
+  gap: 8px;
+
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar in IE and Edge */
+  -ms-overflow-style: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex-shrink: 0;
+  height: 90vh;
+  scroll-snap-align: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-wrapper {
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+
+  width: 3rem;
+  height: 3rem;
+
+  transform: translateY(-50%);
+}
+
+.button--previous {
+  left: 1.5rem;
+
+  transform: rotate(180deg);
+}
+
+.button--next {
+  right: 1.5rem;
+}

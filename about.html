@@ -40,107 +40,53 @@
       </div>
     </section>
 
-    <section class="albume section-outer">
-      <div class="container">
-        <div class="albume-inner">
-          <div class="albume-top">
-            <h2 class="albume__title title">
-              <span class="title__text"> Наш шоу-рум </span>
-            </h2>
-
-            <p class="albume__text" data-aos="fade-up">
-              В нашем шоу-руме представлен большой ассортимент образцов фасадов,
-              фурнитуры, столешниц, а также готовые кухни в современном и
-              классическом стиле, наглядно демонстрирующие все удобства
-              современной мебели. Рады будем видеть вас со вторника по субботу —
-              визит в шоу-рум по предварительной договоренности.
-            </p>
-          </div>
-
-          <div class="albume-container swiper-container" data-aos="fade-up">
-            <div class="albume-items swiper-wrapper">
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-1.webp"
-                  alt="albume photo"
-                />
-              </div>
-
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-2.webp"
-                  alt="albume photo"
-                />
-              </div>
-
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-3.webp"
-                  alt="albume photo"
-                />
-              </div>
-
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-1.webp"
-                  alt="albume photo"
-                />
-              </div>
-
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-2.webp"
-                  alt="albume photo"
-                />
-              </div>
-
-              <div class="albume-item swiper-slide">
-                <img
-                  class="lazyload"
-                  data-src="./images/content/albume-photo-3.webp"
-                  alt="albume photo"
-                />
-              </div>
-            </div>
-
-            <div
-              class="slider-navigation reviews-navigation"
-              data-aos="fade-up"
-            >
-              <div class="slider-button slider-button-prev">
-                <svg viewBox="0 0 66 10">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M61.2071 0.292847L65.9142 4.99995L61.2071 9.70706L59.7929 8.29285L62.0858 5.99995H0V3.99995H62.0858L59.7929 1.70706L61.2071 0.292847Z"
-                  />
-                </svg>
-              </div>
-
-              <div class="slider-pagination"></div>
-
-              <div class="slider-button slider-button-next">
-                <svg viewBox="0 0 66 10">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M61.2071 0.292847L65.9142 4.99995L61.2071 9.70706L59.7929 8.29285L62.0858 5.99995H0V3.99995H62.0858L59.7929 1.70706L61.2071 0.292847Z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="section">
+      <div class="list-wrapper">
+        <h3 class="section_title">Recently finished</h3>
+        <ul class="list">
+          <li class="item">
+            <div class="content"><img src="assets/1-1.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/59.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/53.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/8.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/46.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/29.jpg" /></div>
+          </li>
+          <li class="item">
+            <div class="content"><img src="assets/18.jpg" /></div>
+          </li>
+        </ul>
+        <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
+        <button
+          onclick="handleClick('previous')"
+          class="button button--previous"
+          type="button"
+        >
+          ➜
+        </button>
+        <button
+          onclick="handleClick('next')"
+          class="button button--next"
+          type="button"
+        >
+          ➜
+        </button>
       </div>
     </section>
 
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/sticky-header.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
