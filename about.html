@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Workshop/About</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -19,9 +19,9 @@
       <nav class="navbar">
         <a class="link" href="/home.html">Home</a>
         <a class="link" href="/about.html">About</a>
-        <a class="link" href="#menu">Menu</a>
+        <a class="link" href="/about.html#menu">Menu</a>
         <a class="link" href="/classes.html">Classes</a>
-        <a class="link" href="#book">Book</a>
+        <a class="link" href="/home.html#book">Book</a>
       </nav>
       <a class="emoji" id="theme-toggle"></a>
     </header>
@@ -35,14 +35,28 @@
           <h3 class="home__content-title">
             Carpenter's workshop Auckland Restore
           </h3>
-          <a href="#" class="btn">Order furniture</a>
+          <a href="/home.html#book" class="btn">Order furniture</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="menu">
       <div class="list-wrapper">
         <h3 class="section_title">Recently finished</h3>
+        <button
+          onclick="handleClick('previous')"
+          class="slide-arrow"
+          id="slide-arrow-prev"
+        >
+          &#8249;
+        </button>
+        <button
+          onclick="handleClick('next')"
+          class="slide-arrow"
+          id="slide-arrow-next"
+        >
+          &#8250;
+        </button>
         <ul class="list">
           <li class="item">
             <div class="content"><img src="assets/1-1.jpg" /></div>
@@ -66,27 +80,59 @@
             <div class="content"><img src="assets/18.jpg" /></div>
           </li>
         </ul>
-        <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
-        <button
-          onclick="handleClick('previous')"
-          class="button button--previous"
-          type="button"
-        >
-          ➜
-        </button>
-        <button
-          onclick="handleClick('next')"
-          class="button button--next"
-          type="button"
-        >
-          ➜
-        </button>
       </div>
     </section>
-
+    <section class="section">
+      <h3 class="section_title">Before & After</h3>
+      <div class="container">
+        <div class="imgContainerAfter">
+          <img class="after" src="assets/aa.jpg" alt="" />
+        </div>
+        <div class="imgContainerBefore">
+          <img class="before" src="assets/bb.jpg" alt="" />
+        </div>
+        <div class="slider"></div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="box-container">
+        <div class="box desc">
+          <p class="logo">Auckland Restore</p>
+          <p>
+            Find a wide range of high-quality furniture pieces that will elevate
+            the style and functionality of your home.
+          </p>
+          <p>+1888-567-8910</p>
+          <p>1234 boul Lasalle, Montreal, H4Q 6Y5</p>
+        </div>
+        <div class="box">
+          <h4 class="head">INFORMATION</h4>
+          <a class="link" href="#">Site Map</a>
+          <a class="link" href="#">Search Terms</a>
+          <a class="link" href="#">Advance Search</a>
+          <a class="link" href="#">Privacy Policy</a>
+        </div>
+        <div class="box">
+          <h4 class="head">FOLLOW US</h4>
+          <a class="link" href="#"
+            ><i class="icon fab fa-facebook-f"></i> facebook</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-twitter"></i> twitter</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-instagram"></i> instagram</a
+          >
+          <a class="link" href="#"
+            ><i class="icon fab fa-linkedin"></i> linkedin</a
+          >
+        </div>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/sticky-header.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/slider2.js"></script>
   </body>
 </html>

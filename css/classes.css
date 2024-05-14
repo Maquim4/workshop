@@ -12,10 +12,14 @@
   padding-bottom: 100px;
 }
 
-.container {
+.blog-container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.blog-box__img {
+  max-width: 100%;
 }
 
 .blog-box__title {

@@ -11,15 +11,12 @@
 .list {
   display: flex;
   gap: 8px;
-
   list-style: none;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  /* Hide scrollbar in Firefox */
   scrollbar-width: none;
-
-  /* Hide scrollbar in IE and Edge */
   -ms-overflow-style: none;
+  padding: 0;
 }
 
 .list::-webkit-scrollbar {
@@ -28,7 +25,6 @@
 
 .item {
   flex-shrink: 0;
-  height: 90vh;
   scroll-snap-align: center;
 }
 
@@ -42,22 +38,111 @@
   position: relative;
 }
 
-.button {
+.slide-arrow {
   position: absolute;
-  top: 50%;
-
-  width: 3rem;
-  height: 3rem;
-
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
 }
 
-.button--previous {
-  left: 1.5rem;
-
-  transform: rotate(180deg);
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
 }
 
-.button--next {
-  right: 1.5rem;
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+/*BEFORE AFTER SLIDER*/
+
+.container {
+  margin-left: 36%;
+  position: relative;
+  width: 20vw;
+  height: 70vh;
+}
+
+.imgContainerAfter,
+.imgContainerBefore {
+  position: absolute;
+}
+
+.imgContainerBefore {
+  width: 10vw;
+  overflow: hidden;
+}
+
+.slider {
+  width: 0.3rem;
+  height: 100%;
+  background: white;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+}
+
+.before,
+.after {
+  height: 70vh;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    margin-left: 15%;
+    height: 55vh;
+  }
+
+  .before,
+  .after {
+    height: 55vh;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-left: 10%;
+    height: 50vh;
+  }
+
+  .before,
+  .after {
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    margin-left: 5%;
+    height: 40vh;
+  }
+
+  .before,
+  .after {
+    height: 40vh;
+    object-fit: cover;
+  }
 }
