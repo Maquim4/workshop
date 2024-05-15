@@ -23,6 +23,7 @@
 }
 
 /* HEADER */
+
 .header {
   position: fixed;
   top: 0;
@@ -59,15 +60,16 @@
 }
 
 /* HOME */
-.home {
+.main {
   min-height: 100vh;
   padding-top: 12rem;
-  background: url(../assets/12.svg) no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-.home .btn {
+#home {
+  background: url(../assets/12.svg) no-repeat center/cover;
+}
+
+.main .btn {
   margin-top: 34rem;
   font-family: Inconsolata;
   font-weight: 500;
@@ -76,14 +78,14 @@
   border-color: var(---primaty-color);
 }
 
-.home .home__container .home__content {
+.main .main__container .main__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.home__content-title {
+.main__content-title {
   font-size: 6.5rem;
   font-family: Inconsolata;
   color: var(--text-light);
@@ -95,7 +97,7 @@
   color: var(--link-color-alt);
 }
 
-.home__content-subtitle {
+.main__content-subtitle {
   font-family: Inconsolata;
   font-style: italic;
   font-size: 1.5rem;
@@ -131,11 +133,11 @@
     padding: 1.5rem 2rem;
   }
 
-  .home {
+  .main {
     text-align: center;
   }
 
-  .home .home__container .home__content h3 {
+  .main .main__container .main__content h3 {
     font-size: 4rem;
   }
 
@@ -153,10 +155,9 @@
 }
 
 /* BANNER */
+
 .banner {
-  background: url(../assets/bl.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../assets/bl.jpg) no-repeat center/cover;
 }
 
 .banner__container {
@@ -184,7 +185,7 @@
 
 /* STAGES */
 
-.stages__items-box {
+.stages__item-box {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -192,7 +193,7 @@
   position: relative;
 }
 
-.stages__items-box::before {
+.stages__item-box::before {
   content: "";
   position: absolute;
   left: 0;
@@ -219,6 +220,7 @@
 .stages__item--production {
   margin-left: 317px;
 }
+
 .stages__item--production::after {
   content: "";
   position: absolute;
@@ -228,6 +230,7 @@
   height: 20px;
   background-color: var(--stages-color);
 }
+
 .stages__item--production,
 .stages__item--consultation {
   padding-bottom: 38px;
@@ -263,6 +266,7 @@
   .stages__item {
     width: 350px;
   }
+
   .stages__item--production {
     margin-left: 50px;
   }
@@ -273,28 +277,33 @@
     margin-left: 100px;
   }
 }
+
 @media (max-width: 650px) {
-  .stages__items-box::before,
+  .stages__item-box::before,
   .stages__item--production::after,
   .stages__item--measurements::before {
     display: none;
   }
-  .stages__items-box {
+
+  .stages__item-box {
     border: none;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+
   .stages__item--production {
     margin-left: 0;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
+
   .stages__item--measurements {
     margin-left: 0;
     padding-top: 0;
     padding-bottom: 38px;
   }
+
   .stages__item {
     width: 100%;
   }
@@ -310,7 +319,7 @@
   border: var(--border);
 }
 
-.book .form .box {
+.form-box__input {
   width: 100%;
   padding: 1rem 1.2rem;
   border-radius: 0.5rem;
@@ -322,11 +331,11 @@
   margin: 0.7rem 0;
 }
 
-.book form .box:focus {
+.form-box__input:focus {
   border: var(--border-hover);
 }
 
-.book .form textarea {
+.form-box__text {
   height: 15rem;
   resize: none;
 }
@@ -348,20 +357,9 @@
   border: var(--border-hover);
 }
 
-.heading {
-  font-size: 5rem;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 0.05rem var(--main-color);
-  letter-spacing: 0.2rem;
-  text-align: center;
-  pointer-events: none;
-  position: relative;
-}
-
 /*FOOTER*/
 
-.footer .box-container {
+.footer__container {
   padding: 2rem;
   background-color: var(--footer-color);
   display: grid;
@@ -369,27 +367,39 @@
   gap: 1.5rem;
 }
 
-.footer .box-container .head {
+.footer .footer__container .head {
   font-size: 2rem;
   padding: 1rem 0;
   color: var(--main-color);
 }
 
-.footer .box-container .desc {
+.footer .footer__container .desc {
   color: var(--main-color);
 }
 
-.footer .box-container .box .link {
+.footer .link {
   display: block;
   font-size: 1.5rem;
   padding: 1rem 0;
   color: var(--main-color);
 }
 
-.footer .box-container .box .icon {
+.footer .icon {
   padding-right: 0.5rem;
 }
 
-.footer .box-container .box .link:hover .icon {
+.footer .link:hover {
+  color: var(--la-spec-color);
+}
+
+.just-hover {
+  color: var(--main-color);
+}
+
+.just-hover:hover {
+  color: var(--la-spec-color);
+}
+
+.footer .link:hover .icon {
   padding-right: 1rem;
 }

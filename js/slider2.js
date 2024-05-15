@@ -1,7 +1,7 @@
 const slider = document.querySelector(".slider");
 const before = document.querySelector(".imgContainerBefore");
 const after = document.querySelector(".imgContainerAfter");
-const container = document.querySelector(".container");
+const container = document.querySelector(".ba__container");
 
 const drag = (e) => {
   let xPos = e.layerX;

@@ -25,22 +25,20 @@
       </nav>
       <a class="emoji" id="theme-toggle"></a>
     </header>
-
-    <section class="home" id="home">
-      <div class="home__container">
-        <div class="home__content">
-          <p class="home__content-subtitle">
+    <section class="main" id="home">
+      <div class="main__container">
+        <div class="main__content">
+          <p class="main__content-subtitle">
             Let us make any of your projects a reality.
           </p>
-          <h3 class="home__content-title">
+          <h3 class="main__content-title">
             Carpenter<span class="special-titile">'s</span> workshop
             <span class="special-titile">Auckland Restore</span>
           </h3>
-          <a href="/home.html#book" class="btn">Order furniture</a>
+          <a href="index.html#book" class="btn">Order furniture</a>
         </div>
       </div>
     </section>
-
     <section class="section banner">
       <div class="banner__container">
         <h3 class="section_title">More than 10 years we recover</h3>
@@ -60,7 +58,6 @@
           <img class="banner-icon" src="assets/drawers 1.svg" alt="icon" />
           <span>DRESSERS</span>
         </div>
-
         <div class="icon">
           <img class="banner-icon" src="assets/drawer 1.svg" alt="icon" />
           <span>STOOLS</span>
@@ -79,54 +76,49 @@
         </div>
       </div>
     </section>
-
     <section class="section stages">
-      <div class="container">
-        <h3 class="section_title">How is the restoration process going?</h3>
-        <div class="stages_items">
-          <div class="stages__items-box">
-            <div class="stages__item stages__item--consultation">
-              <img
-                class="stages__item-img"
-                src="assets/designer.svg"
-                alt="icon"
-              />
-              <h6 class="stages__item-title">Designer Consultation</h6>
-              <p class="stages__item-text">
-                Meeting with the client, coordinating all stages of the project
-                with the client, signing the contract, making an advance
-                payment.
-              </p>
-            </div>
-            <div class="stages__item stages__item--production">
-              <img class="stages__item-img" src="assets/prod.svg" alt="icon" />
-              <h6 class="stages__item-title">Production</h6>
-              <p class="stages__item-text">
-                Manufacture, delivery and installation of the product (if
-                necessary)
-              </p>
-            </div>
-          </div>
-          <div class="stages__item stages__item--measurements">
-            <img class="stages__item-img" src="assets/measure.svg" alt="icon" />
-            <h6 class="stages__item-title">Measurements</h6>
+      <h3 class="section_title">How is the restoration process going?</h3>
+      <div class="stages__container">
+        <div class="stages__item-box">
+          <div class="stages__item stages__item--consultation">
+            <img
+              class="stages__item-img"
+              src="assets/designer.svg"
+              alt="icon"
+            />
+            <h6 class="stages__item-title">Designer Consultation</h6>
             <p class="stages__item-text">
-              Departure to the client for measurement (if necessary), drafting
+              Meeting with the client, coordinating all stages of the project
+              with the client, signing the contract, making an advance payment.
+            </p>
+          </div>
+          <div class="stages__item stages__item--production">
+            <img class="stages__item-img" src="assets/prod.svg" alt="icon" />
+            <h6 class="stages__item-title">Production</h6>
+            <p class="stages__item-text">
+              Manufacture, delivery and installation of the product (if
+              necessary)
             </p>
           </div>
         </div>
+        <div class="stages__item stages__item--measurements">
+          <img class="stages__item-img" src="assets/measure.svg" alt="icon" />
+          <h6 class="stages__item-title">Measurements</h6>
+          <p class="stages__item-text">
+            Departure to the client for measurement (if necessary), drafting
+          </p>
+        </div>
       </div>
     </section>
-    <!-- BOOKING -->
     <section class="section book" id="book">
       <h1 class="section_title">Booking</h1>
       <form class="form" action="">
-        <input type="text" placeholder="Name" class="box" />
-        <input type="email" placeholder="Email" class="box" />
+        <input type="text" placeholder="Name" class="form-box__input" />
+        <input type="email" placeholder="Email" class="form-box__input" />
         <textarea
           name=""
           placeholder="Message"
-          class="box"
+          class="form-box__input form-box__text"
           id=""
           cols="30"
           rows="10"
@@ -135,16 +127,19 @@
       </form>
     </section>
     <footer class="footer">
-      <div class="box-container">
+      <div class="footer__container">
         <div class="box desc">
-          <p class="logo">Auckland Restore</p>
+          <p class="logo special-titile">Auckland Restore</p>
           <p>
             Find a wide range of high-quality furniture pieces that will elevate
             the style and functionality of your home.
           </p>
-          <p><a href="tel:+18885678910">+1 (888) 567-8910</a></p>
+          <p>
+            <a class="just-hover" href="tel:+18885678910">+1 (888) 567-8910</a>
+          </p>
           <p>
             <a
+              class="just-hover"
               href="https://maps.google.com?q=1234+boul+Lasalle,+Montreal,+H4Q+6Y5"
               target="_blank"
               >1234 boul Lasalle, Montreal, H4Q 6Y5</a
@@ -160,18 +155,18 @@
         </div>
         <div class="box">
           <h4 class="head">FOLLOW US</h4>
-          <a class="link" href="#"
-            ><i class="icon fab fa-facebook-f"></i> facebook</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-twitter"></i> twitter</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-instagram"></i> instagram</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-linkedin"></i> linkedin</a
-          >
+          <a class="link" href="#">
+            <i class="icon fab fa-facebook-f"></i> facebook
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-twitter"></i> twitter
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-instagram"></i> instagram
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-linkedin"></i> linkedin
+          </a>
         </div>
       </div>
     </footer>

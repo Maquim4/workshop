@@ -1,11 +1,7 @@
 @import "home.css";
 
-.home {
-  min-height: 100vh;
-  padding-top: 12rem;
-  background: url(../assets/old.svg) no-repeat;
-  background-position: center;
-  background-size: cover;
+#about {
+  background: url(../assets/old.svg) no-repeat center/cover;
 }
 
 .list {
@@ -73,7 +69,7 @@
 
 /*BEFORE AFTER SLIDER*/
 
-.container {
+.ba__container {
   margin-left: 36%;
   position: relative;
   width: 20vw;
@@ -109,7 +105,7 @@
 }
 
 @media screen and (max-width: 750px) {
-  .container {
+  .ba__container {
     margin-left: 15%;
     height: 55vh;
   }
@@ -122,7 +118,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .container {
+  .ba__container {
     margin-left: 10%;
     height: 50vh;
   }
@@ -135,7 +131,7 @@
 }
 
 @media screen and (max-width: 380px) {
-  .container {
+  .ba__container {
     margin-left: 5%;
     height: 40vh;
   }

@@ -25,21 +25,21 @@
       </nav>
       <a class="emoji" id="theme-toggle"></a>
     </header>
-    <section class="home" id="home">
-      <div class="home__container">
-        <div class="home__content">
-          <p class="home__content-subtitle">
+    <section class="main" id="classes">
+      <div class="main__container">
+        <div class="main__content">
+          <p class="main__content-subtitle">
             Let us make any of your projects a reality.
           </p>
-          <h3 class="home__content-title">
+          <h3 class="main__content-title">
             Carpenter's workshop Auckland Restore
           </h3>
-          <a href="/home.html#book" class="btn">Order furniture</a>
+          <a href="index.html#book" class="btn">Order furniture</a>
         </div>
       </div>
     </section>
-    <section class="section blog-box">
-      <div class="blog-container">
+    <section class="section blog">
+      <div class="blog__container">
         <h3 class="section_title">More inspiration ideas in our blog</h3>
         <div class="blog-box__items">
           <div class="blog-box__item">
@@ -71,14 +71,13 @@
         </div>
       </div>
     </section>
-
-    <section class="testimonials">
-      <div class="small-container">
+    <section class="review">
+      <div class="review__container">
         <h3 class="section_title">Reviews from our customers</h3>
         <div class="row">
           <div class="col-3">
             <i class="fas fa-quote-left"></i>
-            <p>
+            <p class="review__desc">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever.
@@ -90,12 +89,12 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half"></i>
             </div>
-            <img src="assets/prof.jpg" />
-            <h3>John Doe</h3>
+            <img class="review__img" src="assets/prof.jpg" />
+            <h3 class="review__name">John Doe</h3>
           </div>
           <div class="col-3">
             <i class="fas fa-quote-left"></i>
-            <p>
+            <p class="review__desc">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever.
@@ -107,12 +106,12 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half"></i>
             </div>
-            <img src="assets/prof.jpg" />
-            <h3>John Doe</h3>
+            <img class="review__img" src="assets/prof.jpg" />
+            <h3 class="review__name">John Doe</h3>
           </div>
           <div class="col-3">
             <i class="fas fa-quote-left"></i>
-            <p>
+            <p class="review__desc">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever.
@@ -124,23 +123,31 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half"></i>
             </div>
-            <img src="assets/prof.jpg" />
-            <h3>John Doe</h3>
+            <img class="review__img" src="assets/prof.jpg" />
+            <h3 class="review__name">John Doe</h3>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="footer">
-      <div class="box-container">
+      <div class="footer__container">
         <div class="box desc">
-          <p class="logo">Auckland Restore</p>
+          <p class="logo special-titile">Auckland Restore</p>
           <p>
             Find a wide range of high-quality furniture pieces that will elevate
             the style and functionality of your home.
           </p>
-          <p>+1888-567-8910</p>
-          <p>1234 boul Lasalle, Montreal, H4Q 6Y5</p>
+          <p>
+            <a class="just-hover" href="tel:+18885678910">+1 (888) 567-8910</a>
+          </p>
+          <p>
+            <a
+              class="just-hover"
+              href="https://maps.google.com?q=1234+boul+Lasalle,+Montreal,+H4Q+6Y5"
+              target="_blank"
+              >1234 boul Lasalle, Montreal, H4Q 6Y5</a
+            >
+          </p>
         </div>
         <div class="box">
           <h4 class="head">INFORMATION</h4>
@@ -151,22 +158,21 @@
         </div>
         <div class="box">
           <h4 class="head">FOLLOW US</h4>
-          <a class="link" href="#"
-            ><i class="icon fab fa-facebook-f"></i> facebook</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-twitter"></i> twitter</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-instagram"></i> instagram</a
-          >
-          <a class="link" href="#"
-            ><i class="icon fab fa-linkedin"></i> linkedin</a
-          >
+          <a class="link" href="#">
+            <i class="icon fab fa-facebook-f"></i> facebook
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-twitter"></i> twitter
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-instagram"></i> instagram
+          </a>
+          <a class="link" href="#">
+            <i class="icon fab fa-linkedin"></i> linkedin
+          </a>
         </div>
       </div>
     </footer>
-
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/sticky-header.js"></script>

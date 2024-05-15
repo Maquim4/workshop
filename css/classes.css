@@ -1,18 +1,14 @@
 @import "about.css";
 
-.home {
-  min-height: 100vh;
-  padding-top: 12rem;
-  background: url(../assets/th.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
+#classes {
+  background: url(../assets/th.jpg) no-repeat center/cover;
 }
 
-.blog-box {
+.blog {
   padding-bottom: 100px;
 }
 
-.blog-container {
+.blog__container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
@@ -30,26 +26,31 @@
   text-align: center;
   max-width: 430px;
 }
+
 .blog-box__items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
+
 .blog-box__img-link {
   margin-bottom: 19px;
   display: inline-block;
 }
+
 .blog-box__links {
   margin-bottom: 9px;
   font-size: 14px;
   font-weight: 600;
   color: #707070;
 }
+
 .blog-box__date,
 .blog-box__autor,
 .blog-box__theme {
   color: inherit;
 }
+
 .blog-box__item-title {
   color: #363838;
   font-size: 24px;
@@ -83,7 +84,7 @@
   }
 }
 
-/* TESTIMONIALS */
+/* REVIEWS */
 
 .row {
   display: flex;
@@ -91,14 +92,14 @@
   flex-wrap: wrap;
 }
 
-.small-container {
+.review__container {
   width: 100%;
   max-width: 100rem;
   margin: auto;
   padding: 0 2rem;
 }
 
-.testimonials .col-3 {
+.review .col-3 {
   text-align: center;
   padding: 4rem 2rem;
   box-shadow: 0 0 2rem 0px rgba(0, 0, 0, 0.1);
@@ -112,11 +113,11 @@
   margin-bottom: 3rem;
 }
 
-.testimonials .col-3:hover {
+.review .col-3:hover {
   transform: translateY(-10px);
 }
 
-.testimonials .col-3 img {
+.review .col-3 .review__img {
   width: 5rem;
   margin-top: 2rem;
   border-radius: 50%;
@@ -127,14 +128,14 @@
   color: #f42153;
 }
 
-.col-3 p {
+.col-3 .review__desc {
   font-size: 1.5rem;
   line-height: 1.5;
   margin: 1.2rem 0;
   color: #777;
 }
 
-.testimonials .col-3 h3 {
+.review .col-3 .review__name {
   font-weight: 600;
   color: #555;
   font-size: 1.6rem;
