@@ -12,3 +12,4 @@ const drag = (e) => {
 };
 
 container.addEventListener("mousemove", drag);
+container.addEventListener("touchmove", drag);

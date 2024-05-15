@@ -49,7 +49,7 @@
 }
 
 .header .navbar a:hover {
-  color: var(--link-color-hover);
+  color: var(--orthogonal-color);
 }
 
 #menu-btn {

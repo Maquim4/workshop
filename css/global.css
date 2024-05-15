@@ -44,7 +44,7 @@
   --switch-icon: var(--light-switch-icon);
 
   --bg-color: var(--bg-primary);
-  --orthogonal-color: var(var(--dark-bg));
+  --orthogonal-color: var(--dark-bg);
   --svg-filter: var(--light-theme-filter);
   --text: var(--text-dark);
   --title-font-color: var(--text-dark);
